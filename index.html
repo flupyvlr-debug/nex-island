@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="NEX Island">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>NEX Island</title>
+</head>
+<body>
+  <main class="phone">
+    <header class="status">
+      <span id="clock">9:41</span>
+      <div class="status-right"><span>●●●</span><span>Wi-Fi</span><span class="battery"><i></i></span></div>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow">NEX ISLAND <span>•</span> IPHONE 11</div>
+      <h1>Uma ilha.<br><span>Novas possibilidades.</span></h1>
+      <p class="intro">Toque na cápsula para explorar os controles.</p>
+
+      <button class="island" id="island" aria-expanded="false" aria-label="Expandir NEX Island">
+        <span class="camera"></span>
+        <span class="island-mini" id="miniContent"><span class="tiny-dot"></span><span id="miniText">NEX Island</span></span>
+        <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      </button>
+
+      <section class="expanded" id="expanded" hidden>
+        <div class="expanded-top">
+          <div><span class="muted-label">AGORA</span><strong id="expandedTitle">NEX Island</strong></div>
+          <button class="close" id="close" aria-label="Fechar">×</button>
+        </div>
+        <div class="player">
+          <div class="album">♫</div>
+          <div class="track"><strong id="trackName">Nenhuma música selecionada</strong><span id="trackArtist">Abra seu app de música</span></div>
+          <button class="play" id="play" aria-label="Reproduzir demonstração">▶</button>
+        </div>
+        <div class="progress"><span></span></div>
+        <div class="player-times"><span>0:00</span><span>3:42</span></div>
+        <div class="quick-actions">
+          <button data-action="timer">◷ <span>Temporizador</span></button>
+          <button data-action="battery">ϟ <span>Bateria</span></button>
+          <button data-action="about">ⓘ <span>Sobre</span></button>
+        </div>
+      </section>
+    </section>
+
+    <section class="modules">
+      <div class="section-heading"><div><span class="eyebrow">CENTRAL DE CONTROLES</span><h2>Explore a ilha</h2></div><span class="pill">BETA 0.1</span></div>
+      <div class="cards">
+        <button class="module-card" data-action="music"><span class="module-icon music-icon">♫</span><strong>Música</strong><small>Player demonstrativo</small><span class="arrow">↗</span></button>
+        <button class="module-card" data-action="timer"><span class="module-icon timer-icon">◷</span><strong>Temporizador</strong><small>Contagem regressiva</small><span class="arrow">↗</span></button>
+        <button class="module-card" data-action="battery"><span class="module-icon battery-icon">ϟ</span><strong>Bateria</strong><small>Informações do aparelho</small><span class="arrow">↗</span></button>
+        <button class="module-card" data-action="about"><span class="module-icon info-icon">ⓘ</span><strong>Sobre a NEX</strong><small>Versão e recursos</small><span class="arrow">↗</span></button>
+      </div>
+    </section>
+
+    <footer><span class="footer-dot"></span> Feita para iPhone 11 <span>•</span> NEX Island</footer>
+  </main>
+
+  <dialog id="panel">
+    <div class="dialog-grabber"></div>
+    <button class="dialog-close" id="dialogClose">×</button>
+    <div id="dialogContent"></div>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>
